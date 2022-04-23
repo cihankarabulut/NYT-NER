@@ -11,11 +11,8 @@ import spacy_streamlit
 
 def app():
         
-    try:
-        models = ["en_core_web_md"]
-    except: # If not present, we download
-        spacy.cli.download("en_core_web_md")
-        models = ["en_core_web_md"]    
+    spacy.cli.download("en_core_web_md")
+    models = ["en_core_web_md"]    
         
     
     default_text = ""
